@@ -24,8 +24,6 @@ public class OrderDBService implements IOrderDBService {
                 stmt.setInt(2, order.getOrderID());
                 stmt.setString(3, order.getAllPizzaTitles());
                 stmt.setInt(4, order.getPrice());
-                System.out.println(stmt.toString());
-
                 stmt.executeUpdate();
             }
         } catch (SQLException e) {
