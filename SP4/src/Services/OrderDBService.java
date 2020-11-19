@@ -15,15 +15,16 @@ public class OrderDBService implements IOrderDBService {
         ResultSet res = null;
 
         String sql = "";
-        sql += "INSERT INTO CompletedOrder (currentTime,orderID,pizzas,price) VALUES (?,?,?,?)";
+        sql += "INSERT INTO CompletedOrder (currentTime,orderID,phone,pizzas,price) VALUES (?,?,?,?,?)";
         connection = dbc.getMyConnection();
         try {
             stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             for (Order order : orders) {
                 stmt.setString(1, order.getCTimeStamp());
                 stmt.setInt(2, order.getOrderID());
-                stmt.setString(3, order.getAllPizzaTitles());
-                stmt.setInt(4, order.getPrice());
+                stmt.setString(3,order.getPhoneNr());
+                stmt.setString(4, order.getAllPizzaTitles());
+                stmt.setInt(5, order.getPrice());
                 stmt.executeUpdate();
             }
         } catch (SQLException e) {
