@@ -33,6 +33,11 @@ public class MainController {
                     os.showActiveOrders();
                     menu.newLine();
                     break;
+                case 4:
+                    ods.confirmOrder(os.getOrders());
+                    os.clearOrders();
+                    menu.showConfirmOrderUI();
+                    break;
                 case 9:
                     menu.exit();
                     break;

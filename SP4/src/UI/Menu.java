@@ -17,8 +17,7 @@ public class Menu implements IMenu {
         System.out.println("1) Show Menu");
         System.out.println("2) Create order");
         System.out.println("3) Show active orders");
-        System.out.println("4) Confirm order");
-        System.out.println("5) Show statistics");
+        System.out.println("4) Confirm Order");
         System.out.println("9) Exit");
     }
 
@@ -26,12 +25,12 @@ public class Menu implements IMenu {
         System.out.println("Exiting ..");
     }
 
-    public int addPizzaToOrder() throws NoSuchPizzaException{
+    public int addPizzaToOrder() throws NoSuchPizzaException {
         int retVal = 0;
         int size = ps.getAllPizzas().size();
         System.out.println("\nEnter pizza ID (99 to exit)");
         retVal = sc.nextInt();
-        if (retVal>size && retVal != 99) {
+        if (retVal > size && retVal != 99) {
             throw new NoSuchPizzaException();
         }
         return retVal;

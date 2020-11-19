@@ -41,6 +41,10 @@ public class Order {
         return orderID;
     }
 
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
+    }
+
     public String getPhoneNr() {
         return phoneNr;
     }
