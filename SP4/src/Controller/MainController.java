@@ -38,6 +38,9 @@ public class MainController {
                     os.clearOrders();
                     menu.showConfirmOrderUI();
                     break;
+                case 5:
+                    ss.showStatistics();
+                    break;
                 case 9:
                     menu.exit();
                     break;
