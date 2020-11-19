@@ -10,6 +10,7 @@ public class MainController {
     Scanner sc = new Scanner(System.in);
     IDBConnector dbc = new DBConnector();
     IPizzaService ps = new PizzaService();
+    IOrderService os = new OrderService();
     IMenu menu = new Menu();
     int choice = 0;
 
@@ -23,7 +24,18 @@ public class MainController {
                     ps.showPizzaMenu();
                     menu.newLine();
                     break;
+                case 2:
+                    os.createOrder();
+                    break;
+                case 3:
+                    os.showActiveOrders();
+                    menu.newLine();
+                    break;
                 case 9:
+                    menu.exit();
+                    break;
+                default:
+                    choice = 9;
                     menu.exit();
                     break;
             }
