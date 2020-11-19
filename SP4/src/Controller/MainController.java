@@ -11,6 +11,8 @@ public class MainController {
     IDBConnector dbc = new DBConnector();
     IPizzaService ps = new PizzaService();
     IOrderService os = new OrderService();
+    IOrderDBService ods = new OrderDBService();
+    IStatisticsService ss = new StatisticsService();
     IMenu menu = new Menu();
     int choice = 0;
 
