@@ -37,9 +37,9 @@ public class StatisticsService implements IStatisticsService {
                 String[] p;
                 String delimiter = ",";
                 p = pizzas.split(delimiter);
-                List<String> pizzalist = new ArrayList<>();
-                pizzalist = Arrays.asList(p);
-                tmpCompletedOrder = new CompletedOrder(timestamp, id, phoneNr, pizzalist, price);
+                List<String> pizzasAsList = new ArrayList<>();
+                pizzasAsList = Arrays.asList(p);
+                tmpCompletedOrder = new CompletedOrder(timestamp, id, phoneNr, pizzasAsList, price);
                 completedOrders.add(tmpCompletedOrder);
             }
 
